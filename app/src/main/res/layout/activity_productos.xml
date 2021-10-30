@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_horizontal"
+    android:layout_marginHorizontal="5dp"
+    tools:context=".productos">
+
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:text="Productos"
+                android:textSize="20dp"
+                android:textAlignment="center"
+                android:textColor="#FFFFFF"
+                android:background="@drawable/titulos"
+                android:layout_margin="5dp"/>
+
+            <TextView
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/titulos"
+                android:textAlignment="center"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:text="Registrar un nuevo producto"
+                android:textColor="#FFFFFF" />
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Nombre"
+                android:textColor="#F44336"
+                />
+
+            <EditText
+                android:id="@+id/tnombre"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/textbox"
+                android:ems="10"
+                android:hint="--"
+                android:paddingLeft="10dp"
+                android:singleLine="true" />
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Descripcion"
+                android:textColor="#F44336"
+                />
+
+            <EditText
+                android:id="@+id/tdescripcion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/textbox"
+                android:ems="10"
+                android:hint="--"
+                android:paddingLeft="10dp"
+                android:singleLine="true"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Precio"
+                android:textColor="#F44336"
+                />
+
+            <EditText
+                android:id="@+id/tprecio"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/textbox"
+                android:inputType="number"
+                android:ems="10"
+                android:hint="--"
+                android:paddingLeft="10dp"
+                android:singleLine="true" />
+
+            <Button
+                android:id="@+id/btnaddItem"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="añadir"
+                android:drawableRight="@drawable/ic_sharp_add_circle_24"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Productos"
+                android:textColor="#F44336"
+                />
+
+            <ListView
+                android:id="@+id/lvItems"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+
+
+
+
+
+        </LinearLayout>
+
+
+
+
+
+</LinearLayout>

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="top"
+    android:layout_marginHorizontal="5dp"
+    tools:context=".reporte"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+        <TextView
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:text="Tu historia por Ventas"
+        android:textSize="20dp"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:background="@drawable/titulos"
+        android:layout_margin="5dp"/>
+
+
+
+
+        <TextView
+        android:id="@+id/tfecha"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/titulos"
+        android:drawableRight="@drawable/ic_baseline_date_range_24"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:gravity="center_vertical"
+        android:text="Hoy, 24 de Agosto de 2021"
+        android:textColor="#FFFFFF" />
+
+
+        <ListView
+        android:id="@+id/lvVentas"
+        android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"/>
+
+        <TextView
+            android:id="@+id/ttotalvta"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/titulos"
+            android:paddingLeft="10dp"
+            android:paddingRight="15dp"
+            android:text="Total: $0.0"
+            android:textAlignment="textEnd"
+            android:textColor="#FFFFFF"
+            android:textSize="25dp" />
+
+
+    </LinearLayout>
+
+</LinearLayout>

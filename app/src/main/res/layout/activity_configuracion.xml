@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".configuracion"
+    android:gravity="center_horizontal"
+    android:layout_marginHorizontal="5dp"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:text="Configuracion"
+        android:textSize="20dp"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:background="@drawable/titulos"
+        android:layout_margin="5dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:text="Ticket"
+            android:textSize="20dp"
+            android:textAlignment="center"
+            android:textColor="#FFFFFF"
+            android:background="@drawable/titulos"
+            android:layout_margin="5dp"
+            android:paddingRight="10dp"
+            android:drawableRight="@drawable/ic_baseline_notes_24"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Encabezado de ticket"
+            android:textColor="#F44336"
+            />
+        <EditText
+            android:id="@+id/TbCabecera"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:background="@drawable/textbox"
+            android:ems="10"
+            android:hint="--"
+            android:inputType="textMultiLine"
+            android:paddingLeft="10dp"
+            android:scrollbars="vertical"
+            android:maxEms="25"
+            android:imeOptions="actionDone"
+            android:gravity="start|top"
+            />
+
+
+        <Switch
+            android:id="@+id/swPrint"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Facturar e Imprimir"
+            android:checked="false"
+            android:tooltipText="Puedes guardar e imprimir simultaneamente."/>
+
+        <Switch
+            android:id="@+id/swPrintPDF"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Impresora/PDF"
+            android:checked="false"
+            android:enabled="false"
+            android:tooltipText="Puedes usar una impresora BT(CPCL) o generar un PDF."/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:text="Impresora"
+            android:textSize="20dp"
+            android:textAlignment="center"
+            android:textColor="#FFFFFF"
+            android:background="@drawable/titulos"
+            android:layout_margin="5dp"
+
+            android:paddingRight="10dp"
+            android:drawableRight="@drawable/ic_baseline_print_24"/>
+
+        <ListView
+            android:id="@+id/select_device_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"/>
+
+        <EditText
+            android:id="@+id/TbMac"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/textbox"
+            android:singleLine="true"
+            android:textAlignment="center"
+            android:text="00:00:00:00:00"/>
+
+        <Button
+            android:id="@+id/btnGuardar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:text="Guardar"
+            />
+
+    </LinearLayout>
+
+</LinearLayout>
