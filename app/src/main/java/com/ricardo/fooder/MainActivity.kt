@@ -364,12 +364,12 @@ class MainActivity : AppCompatActivity() {
             canvas.drawText("Tel: ${objVentas.telefono}", 10F, 85F,paint)
             canvas.drawText("Dir: ${objVentas.direccion}", 10F, 100F,paint)
 
-            canvas.drawText("************************************************", 10F, 115F,paint)
+            canvas.drawText("***************************************************", 10F, 115F,paint)
 
 
             canvas.drawText("Item", 10F, 130F,paint)
-            canvas.drawText("Cant.", 130F, 130F,paint)
-            canvas.drawText("Vlr.", 170F, 130F,paint)
+            canvas.drawText("Cant.", 190F, 130F,paint)
+            canvas.drawText("Vlr.", 230F, 130F,paint)
 
             var renglon = 150F
             var cant = 0
@@ -377,17 +377,19 @@ class MainActivity : AppCompatActivity() {
             for(i in list1.indices){
 
                 canvas.drawText("${list1[i].nombreItem?.substring(0,15)}", 10F, renglon,paint)
-                canvas.drawText("1", 130F, renglon,paint)
-                canvas.drawText("${list1[i].precioItem}", 170F, renglon,paint)
+                canvas.drawText("${list1[i].descripcionItem?.substring(0,30)}", 15F, renglon+12F,paint)
 
-                renglon+=15F
+                canvas.drawText("1", 190F, renglon,paint)
+                canvas.drawText("${list1[i].precioItem}", 230F, renglon,paint)
+
+                renglon+=22F
                 cant+=1
 
             }
 
 
-            canvas.drawText("${cant}", 130F, renglon,paint)
-            canvas.drawText("$${objVentas.totalVta}", 170F, renglon,paint)
+            canvas.drawText("${cant}", 190F, renglon,paint)
+            canvas.drawText("$${objVentas.totalVta}", 230F, renglon,paint)
 
             pd.finishPage(page)
             val ruta = "/sdcard/fooder"
@@ -451,14 +453,16 @@ class MainActivity : AppCompatActivity() {
                 for(i in list1.indices){
 
                     ticket +="T 0 2 16 $renglon ${list1[i].nombreItem?.substring(0,15)}\n" +
-                            "T 0 2 304 $renglon ${list1[i].precioItem}\n" +
-                            "T 0 2 161 $renglon 1\n"
+                            "T 0 2 18 ${renglon+10} ${list1[i].descripcionItem?.substring(0,30)}\n"+
+                            "T 0 2 180 $renglon 1\n"+
+                            "T 0 2 304 $renglon ${list1[i].precioItem}\n"
 
-                    renglon+=25
+
+                    renglon+=30
                     cant+=1
 
                 }
-                ticket +="T 0 2 162 $renglon $cant\n" +
+                ticket +="T 0 2 180 $renglon $cant\n" +
                         "T 0 2 304 $renglon $${objVentas.totalVta}\n" +
                         "PRINT\n"
 

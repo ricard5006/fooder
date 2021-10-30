@@ -87,10 +87,11 @@ class dialogProducto : AppCompatActivity() {
                     dialogV.BtnDialogCancel.setOnClickListener { mAlertD.dismiss() }
                     dialogV.BtnDialogAdd.setOnClickListener {
 
-                        opciones = dialogV.TbOpcioneDialog.text.toString().lowercase()
-                        itm.descripcionItem += opciones
+                        opciones = dialogV.TbOpcioneDialog.text.toString().padEnd(30,' ').lowercase()
+                        itm.descripcionItem = "*"+opciones
                         listItems.add(itm)
                         Toast.makeText(this,"Producto añadido!!!", Toast.LENGTH_SHORT).show()
+                        mAlertD.dismiss()
                     }
 
 
