@@ -113,7 +113,7 @@ class dialogVentas : AppCompatActivity() {
 
             var pageHigh = 180
             list1.forEach {
-                pageHigh += 15
+                pageHigh += 18
             }
 
 
@@ -136,16 +136,16 @@ class dialogVentas : AppCompatActivity() {
 
             canvas.drawText("Cliente: ${objVentas.cliente}", 10F, 70F,paint)
             canvas.drawText("Tel: ${objVentas.telefono}", 10F, 85F,paint)
-            canvas.drawText("Dir: ${objVentas.direccion}", 10F, 100F,paint)
+            canvas.drawText("Dir: ${objVentas.direccion?.substring(0,50)}", 10F, 100F,paint)
+            canvas.drawText("- ${objVentas.direccion?.substring(50,100)}", 10F, 115F,paint)
+            canvas.drawText("******************************************************", 10F, 128F,paint)
 
-            canvas.drawText("***************************************************", 10F, 115F,paint)
 
+            canvas.drawText("Item", 10F, 135F,paint)
+            canvas.drawText("Cant.", 190F, 135F,paint)
+            canvas.drawText("Vlr.", 230F, 135F,paint)
 
-            canvas.drawText("Item", 10F, 130F,paint)
-            canvas.drawText("Cant.", 190F, 130F,paint)
-            canvas.drawText("Vlr.", 230F, 130F,paint)
-
-            var renglon = 150F
+            var renglon = 155F
             var cant = 0
 
             for(i in list1.indices){

@@ -68,7 +68,7 @@ class MainActivity : AppCompatActivity() {
                 vta_.idvtas = lastVenta()
                 vta_.cliente = tcliente.text.toString()
                 vta_.telefono = ttelefono.text.toString()
-                vta_.direccion = tdireccion.text.toString()
+                vta_.direccion = tdireccion.text.toString().padEnd(100,' ')
                 vta_.fechaVta = fechaNow()
 
                 for(i in listItems.indices){
