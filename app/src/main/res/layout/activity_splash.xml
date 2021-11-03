@@ -21,8 +21,8 @@
         android:id="@+id/prueba"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Powered by Ricardo R."
-        android:textColor="#FFFFFF"
+        android:text="Powered by Ricardo Rojas v1.00"
+        android:textColor="#EC877F"
         android:background="@color/rojo"
         android:textAlignment="center"
         android:padding="10dp"/>

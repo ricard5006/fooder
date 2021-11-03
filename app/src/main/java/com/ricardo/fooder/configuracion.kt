@@ -73,6 +73,7 @@ class configuracion : AppCompatActivity() {
 
 
             objParametros.parametro ="ticket"
+            var datos = TbCabecera.text.toString()
             objParametros.valor = TbCabecera.text.toString()
             objDb.updateParametro(objParametros)
 

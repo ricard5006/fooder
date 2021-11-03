@@ -2,7 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="#FFFFFF"
+    android:background="#00FFFFFF"
     android:orientation="vertical">
 
     <EditText
@@ -13,7 +13,7 @@
         android:gravity="top"
         android:textAlignment="gravity"
         android:padding="10dp"
-        android:background="@drawable/textbox"/>
+        android:background="@drawable/editbox"/>
 
     <LinearLayout
         android:layout_width="match_parent"

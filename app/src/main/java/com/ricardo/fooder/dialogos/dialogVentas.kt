@@ -113,7 +113,7 @@ class dialogVentas : AppCompatActivity() {
 
             var pageHigh = 180
             list1.forEach {
-                pageHigh += 18
+                pageHigh += 22
             }
 
 
